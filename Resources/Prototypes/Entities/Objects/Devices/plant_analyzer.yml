@@ -1,0 +1,22 @@
+- type: entity
+  name: plant analyzer
+  parent: BaseItem
+  id: PlantAnalyzer
+  description: A handheld device that allows you to scan seeds and plants to get detailed information about their genes.
+  components:
+    - type: Sprite
+      netsync: false
+      sprite: Objects/Devices/plant_analyzer.rsi
+      state: icon
+    - type: Item
+      storedRotation: -90
+    - type: ActivatableUI
+      key: enum.PlantAnalyzerUiKey.Key
+      closeOnHandDeselect: false
+    - type: UserInterface
+      interfaces:
+        - key: enum.PlantAnalyzerUiKey.Key
+          type: PlantAnalyzerBoundUserInterface
+    - type: PlantAnalyzer
+      scanningEndSound:
+        path: "/Audio/Items/Medical/healthscanner.ogg"
