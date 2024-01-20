@@ -666,6 +666,11 @@
           min: 1
         reagent: Amatoxin
         amount: -3
+  plantMetabolism:
+  - !type:PlantAdjustToxins
+    amount: -10
+  - !type:PlantAdjustHealth
+    amount: 1      
 
 - type: reagent
   id: Synaptizine
